@@ -1,0 +1,40 @@
+
+
+.section5{
+    background: hsl(168, 51%, 68%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0 5rem 0;
+    gap: 1rem;
+}
+
+
+.footer__nav a{
+    text-decoration: none;
+    color: hsl(167, 79%, 19%);
+    font-weight: lighter;
+    margin-right: 1.5rem;
+    &:last-child{
+        margin: 0;
+    }
+    
+    &:hover{
+        color: white;
+    }
+}
+
+.footer__nav{
+    margin-bottom: 4rem;
+}
+
+
+
+.footer__social a{
+    text-decoration: none;
+    margin-right: 1rem;
+    &:last-child{
+        margin: 0;
+    }
+}
