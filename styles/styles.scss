@@ -1,0 +1,32 @@
+
+@font-face {
+    font-family: 'title-bold';
+    src: url(../fonts/Fraunces-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'title-black';
+    src: url(../fonts/Fraunces-Black.ttf);
+}
+
+@font-face {
+    font-family: 'body';
+    src: url(../fonts/Barlow-SemiBold.ttf);
+}
+
+$title-black-font: 'title-black';
+$title-bold-font: 'title-bold';
+$body-font: 'body';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $body-font;
+}
+
+@import '_section1';
+@import '_section2';
+@import '_section3';
+@import '_section4';
+@import '_section5';

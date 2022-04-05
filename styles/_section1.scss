@@ -1,0 +1,133 @@
+
+@mixin mobile-nav {
+    width: 300px;
+    margin: auto auto;
+    background: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+.mobile-nav--active{
+    display: block;
+    @include mobile-nav();
+}
+
+.mobile-nav__link{
+    margin-bottom: 1rem;
+    a{
+        color: grey;
+        font-weight: bold;
+    }
+}
+.mobile-nav a{
+    font-size: 1rem;
+    text-decoration: none;
+}
+.mobile-nav__cta{
+    background: hsl(51, 100%, 49%);
+    padding: 0 1rem 0.5rem 1rem;
+    border-radius: 50px;
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+    a{
+        color: black;
+    }
+}
+
+
+
+
+
+.section1{
+    background: url(../images/desktop/image-header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    button{
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;   
+
+        &__menu{
+            display: none;
+        }
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        &__title{
+            font-family: $title-black-font;
+            color: white;
+            font-size: 3rem;
+            letter-spacing: 0.3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &__svg{
+            margin-top: 7.5rem;
+            height: 4.5rem;
+        }
+    }
+}
+
+
+
+@media (min-width: 1024px){
+
+    .section1{    
+        .nav{
+            padding-top: 2rem;
+            .nav__menu{
+                display: block;
+                .menu__item{
+                    text-decoration: none;
+                    cursor: pointer;
+                    margin-right: 0.2rem;
+                    padding: 0.8rem 1rem;
+                    
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    
+                    &:hover{
+                        padding: 0.8rem 1rem;
+                        border-radius: 50px;
+                        background: rgb(102, 205, 239);
+                    }
+                }
+            }
+
+            .menu__item{
+                color: white;
+            }
+
+            .nav__hamburger{
+                display: none;
+            }
+        }
+    }
+
+
+}
